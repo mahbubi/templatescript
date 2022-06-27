@@ -1,0 +1,12 @@
+#/bin/bash
+source /root/keystonerc_admin
+instance=`openstack server list --all -f value -c ID |wc -l`
+compute1_instance=`openstack server list --host host-0 --all -f value -c ID |wc -l`
+compute2_instance=`openstack server list --host host-1 --all -f value -c ID |wc -l`
+compute3_instance=`openstack server list --host host-2 --all -f value -c ID |wc -l`
+compute4_instance=`openstack server list --host host-3 --all -f value -c ID |wc -l`
+echo "Total instance:" $instance
+echo "host-0:" $compute1_instance
+echo "host-1:" $compute2_instance
+echo "host-2:" $compute3_instance
+echo "host-3:" $compute4_instance
