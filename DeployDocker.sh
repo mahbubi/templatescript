@@ -17,3 +17,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 echo "Done!"
 echo "Lets Check Your Current Installation"
 sudo docker -v
+sudo docker compose version
